@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/pawa/Desktop/functional/functional.fsproj": {}
+    "/home/pawa/Desktop/functional/Hello from F#/functional.fsproj": {}
   },
   "projects": {
-    "/home/pawa/Desktop/functional/functional.fsproj": {
+    "/home/pawa/Desktop/functional/Hello from F#/functional.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/pawa/Desktop/functional/functional.fsproj",
+        "projectUniqueName": "/home/pawa/Desktop/functional/Hello from F#/functional.fsproj",
         "projectName": "functional",
-        "projectPath": "/home/pawa/Desktop/functional/functional.fsproj",
+        "projectPath": "/home/pawa/Desktop/functional/Hello from F#/functional.fsproj",
         "packagesPath": "/home/pawa/.nuget/packages/",
-        "outputPath": "/home/pawa/Desktop/functional/obj/",
+        "outputPath": "/home/pawa/Desktop/functional/Hello from F#/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/pawa/.nuget/NuGet/NuGet.Config"

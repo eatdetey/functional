@@ -5,8 +5,11 @@
     <TargetFramework>net9.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup><Compile Include="sphere.fsx" /><Compile Include="quadratic.fsx" />
-    <Compile Include="hello_world.fsx" />
+  <ItemGroup><Compile Include="sphere.fs" /><Compile Include="quadratic.fs" />
+    <Compile Include="quadratic.fs" />
+    <Compile Include="sphere.fs" />
+    <Compile Include="digits.fs" />
+    <Compile Include="main.fs" />
   </ItemGroup>
 
 </Project>

@@ -1,3 +1,5 @@
+module Digits
+
 let rec digits_Sum n =
     if n=0 then 0
     else (n%10) + (digits_Sum(n/10))
@@ -11,6 +13,3 @@ let digits_Sum_down (n:int) =
             let new_sum = current_sum + digit
             digits_Sum_down1 n1 new_sum
     digits_Sum_down1 n 0
-
-System.Console.WriteLine(digits_Sum(123))
-System.Console.WriteLine(digits_Sum_down(123))
