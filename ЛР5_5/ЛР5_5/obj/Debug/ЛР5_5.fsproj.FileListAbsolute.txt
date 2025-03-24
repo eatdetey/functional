@@ -1,0 +1,9 @@
+C:\Users\Juk.a.s\Documents\Visual Studio 2013\Projects\ЛР5_5\ЛР5_5\bin\Debug\ЛР5_5.exe.config
+C:\Users\Juk.a.s\Documents\Visual Studio 2013\Projects\ЛР5_5\ЛР5_5\bin\Debug\ЛР5_5.XML
+C:\Users\Juk.a.s\Documents\Visual Studio 2013\Projects\ЛР5_5\ЛР5_5\bin\Debug\ЛР5_5.exe
+C:\Users\Juk.a.s\Documents\Visual Studio 2013\Projects\ЛР5_5\ЛР5_5\bin\Debug\ЛР5_5.pdb
+C:\Users\Juk.a.s\Documents\Visual Studio 2013\Projects\ЛР5_5\ЛР5_5\bin\Debug\FSharp.Core.dll
+C:\Users\Juk.a.s\Documents\Visual Studio 2013\Projects\ЛР5_5\ЛР5_5\bin\Debug\FSharp.Core.xml
+C:\Users\Juk.a.s\Documents\Visual Studio 2013\Projects\ЛР5_5\ЛР5_5\bin\Debug\ru\FSharp.Core.resources.dll
+C:\Users\Juk.a.s\Documents\Visual Studio 2013\Projects\ЛР5_5\ЛР5_5\obj\Debug\ЛР5_5.exe
+C:\Users\Juk.a.s\Documents\Visual Studio 2013\Projects\ЛР5_5\ЛР5_5\obj\Debug\ЛР5_5.pdb

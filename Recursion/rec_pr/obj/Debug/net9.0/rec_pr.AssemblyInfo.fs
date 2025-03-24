@@ -7,11 +7,11 @@ open System
 open System.Reflection
 
 
-[<assembly: System.Reflection.AssemblyCompanyAttribute("functional")>]
+[<assembly: System.Reflection.AssemblyCompanyAttribute("rec_pr")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
 [<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa37b171989e579d8152cd402a6a08c2e36dcdb8")>]
-[<assembly: System.Reflection.AssemblyProductAttribute("functional")>]
-[<assembly: System.Reflection.AssemblyTitleAttribute("functional")>]
+[<assembly: System.Reflection.AssemblyProductAttribute("rec_pr")>]
+[<assembly: System.Reflection.AssemblyTitleAttribute("rec_pr")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]
 do()

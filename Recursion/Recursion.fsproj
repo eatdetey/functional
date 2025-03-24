@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="favLanguage.fs" />
+    <Compile Include="digitTraverse.fs" />  
+    <Compile Include="reduce.fs" />
+    <Compile Include="menu.fs" />
+    <Compile Include="fibonacci.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+</Project>

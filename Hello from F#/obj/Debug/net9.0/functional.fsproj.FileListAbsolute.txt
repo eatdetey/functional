@@ -56,3 +56,4 @@
 /home/pawa/Desktop/functional/Hello from F#/obj/Debug/net9.0/functional.fsproj.Up2Date
 /home/pawa/Desktop/functional/Hello from F#/obj/Debug/net9.0/functional.genruntimeconfig.cache
 /home/pawa/Desktop/functional/Hello from F#/obj/Debug/net9.0/ref/functional.dll
+/home/pawa/Desktop/functional/Hello from F#/obj/Debug/net9.0/functional.sourcelink.json
