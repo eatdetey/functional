@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="coprimeTraverse.fs" />
     <Compile Include="favLanguage.fs" />
     <Compile Include="digitTraverse.fs" />  
     <Compile Include="reduce.fs" />
