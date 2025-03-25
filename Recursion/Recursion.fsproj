@@ -12,6 +12,7 @@
     <Compile Include="reduce.fs" />
     <Compile Include="menu.fs" />
     <Compile Include="fibonacci.fs" />
+    <Compile Include="workWithNums.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

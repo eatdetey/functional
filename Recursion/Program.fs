@@ -4,6 +4,7 @@ open reduce
 open digit
 open favLanguage
 open coprimeTraverse
+open workWithNums
 
 //Пара
 System.Console.WriteLine(fibon(19))
@@ -99,9 +100,25 @@ let testCoprimeTraversalPredicate () =
     let sum = coprimeTraversalPredicate number (+) (fun x -> (x%2)=0) 0
     System.Console.WriteLine(sum)
 
-testReduce()
-testDigitTraverse()
-testFavLanguage()
-testCoprimeTraversal()
-testCoprimeTraversalPredicate()
-testEulerFunction()
+//Задание 16-19
+let testWorkWithNums () =
+    let number = 52
+
+    System.Console.WriteLine("Сумма простых делителей числа: {0}", arg0=number)
+    System.Console.WriteLine(sumOfPrimeDivisors number)
+
+    System.Console.WriteLine("Количество нечетных цифр числа, больших 3, для числа {0}", arg0=number)
+    System.Console.WriteLine(countOddDigitsGreaterThanThree number)
+
+    System.Console.WriteLine("Прозведение таких делителей числа, сумма цифр которых меньше, чем сумма цифр исходного числа {0}", arg0=number)
+    System.Console.WriteLine(productOfDivisorsWithSmallerDigitSum number)
+
+    
+
+//testReduce()
+// testDigitTraverse()
+// testFavLanguage()
+// testCoprimeTraversal()
+// testCoprimeTraversalPredicate()
+// testEulerFunction()
+//testWorkWithNums()
