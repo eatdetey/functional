@@ -36,3 +36,16 @@ let productOfDivisorsWithSmallerDigitSum number =
             | _, _ -> findProduct (d + 1) acc
     findProduct 1 1
 
+let selectFunction = function
+    | 1 -> sumOfPrimeDivisors
+    | 2 -> countOddDigitsGreaterThanThree
+    | 3 -> productOfDivisorsWithSmallerDigitSum
+    | _ -> failwith "Ошибка: номер функции должен быть от 1 до 3"
+
+let main_curried (n, m) =
+    let func = selectFunction n
+    let result = func m
+    printfn "Результат: %d" result
+
+let main_composed = selectFunction >> (fun f -> f >> printfn "Результат: %d")
+

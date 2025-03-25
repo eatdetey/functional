@@ -7,11 +7,13 @@ open coprimeTraverse
 open workWithNums
 
 //Пара
-System.Console.WriteLine(fibon(19))
-System.Console.WriteLine(fibon_down(19))
+let testFibonacci () =
+    System.Console.WriteLine(fibon(19))
+    System.Console.WriteLine(fibon_down(19))
 
 //Задание 6
-System.Console.WriteLine(menu(true, 5))
+let testMenu () =
+    System.Console.WriteLine(menu(true, 5))
 
 //Задание 7, 8
 let testReduce () =
@@ -113,8 +115,6 @@ let testWorkWithNums () =
     System.Console.WriteLine("Прозведение таких делителей числа, сумма цифр которых меньше, чем сумма цифр исходного числа {0}", arg0=number)
     System.Console.WriteLine(productOfDivisorsWithSmallerDigitSum number)
 
-    
-
 //testReduce()
 // testDigitTraverse()
 // testFavLanguage()
@@ -122,3 +122,18 @@ let testWorkWithNums () =
 // testCoprimeTraversalPredicate()
 // testEulerFunction()
 //testWorkWithNums()
+
+let run () =
+    printfn "Введите номер функции (от 1 до 3):"
+    let n = System.Int32.Parse(System.Console.ReadLine())
+    
+    System.Console.WriteLine("Введите число для обработки:")
+    let m = System.Int32.Parse(System.Console.ReadLine())
+
+    printfn "\nВыполнение через каррирование:"
+    main_curried (n, m)
+
+    printfn "\nВыполнение через суперпозицию:"
+    main_composed n m
+
+run ()
