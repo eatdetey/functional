@@ -39,7 +39,7 @@ let testBinaryTree () =
 
     Console.WriteLine(inorder treeFromList)
 
-//Задание 7
+//Задание 7, 8
 let testList () =
     let inputList = [1; 2; 2; 3; 3; 3; 4; 4; 4; 4; 5; 9]
     Console.WriteLine("Наиболее часто встречающийся элемент в списке:")
@@ -48,4 +48,20 @@ let testList () =
     Console.WriteLine(sprintf "Количество элементов, являющихся квадратом другого элемента:")
     Console.WriteLine(countSquareElements inputList)
 
-testList()
+//Задание 9
+let testTuples () =
+    let listA = [3; 1; 4; 2]
+    let listB = [14; 32; 23; 42]
+    let listC = [12; 18; 24; 30]
+    let tuples = createTupleList listA listB listC
+    Console.WriteLine("Список кортежей:")
+    tuples |> List.iter (fun (a, b, c) -> Console.WriteLine(sprintf "(%d, %d, %d)" a b c))
+
+
+//Задание 10
+let testReadStrings () =
+    Console.WriteLine("Введите строки (пустая строка для остановки ввода):")
+    let stringList = readStrings()
+    Console.WriteLine(sortStringsByLength stringList)
+
+testReadStrings()
