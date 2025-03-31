@@ -6,7 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="lists.fs" />
+    <Compile Include="binaryTree.fs" />
     <Compile Include="readList.fs" />
+    <Compile Include="frequency.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
