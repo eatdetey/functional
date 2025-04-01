@@ -1,38 +1,6 @@
 module array
 
-let rec shiftRightTwoPositionsList list =
-    match List.length list with
-    | 0 -> list
-    | len ->
-        let shift = 2%len
-        if shift = 0 then list
-        else
-            let splitPoint = len - shift
-            let (firstPart, secondPart) = List.splitAt splitPoint list
-            secondPart @ firstPart
-
-let getChurchLength list =
-    let rec getChurchLengthInner list acc =
-        match list with
-        | [] -> acc
-        | head::tail -> getChurchLengthInner tail (acc+1)
-    getChurchLengthInner list 0
-
-let shiftRightTwoPositionsChurch list =
-    let len = getChurchLength list
-    match len with
-    | 0 -> list
-    | _ ->
-        let shift = 2 % len
-        let rec shiftRightTwoPositionsChurchInner count acc remaining =
-            match count with
-            | 0 -> remaining @ (List.rev acc)
-            | _ -> 
-                match remaining with
-                | [] -> []
-                | head::tail -> shiftRightTwoPositionsChurchInner (count-1) (head::acc) tail
-        shiftRightTwoPositionsChurchInner shift [] list
-
+//Списки Черча
 let rec reverse lst acc =
     match lst with
     | [] -> acc
@@ -103,3 +71,34 @@ let rec countGreaterThanSum lst sum acc =
     | h :: t when h > sum -> countGreaterThanSum t (sum + h) (acc + 1)
     | h :: t -> countGreaterThanSum t (sum + h) acc
 let countElements lst = countGreaterThanSum lst 0 0
+
+// Списки List
+let shiftRight2List lst =
+    let n = List.length lst
+    if n < 2 then lst
+    else let shift = n - 2 in List.skip shift lst @ List.take shift lst
+
+let swapMinMaxList lst =
+    match lst with
+    | [] -> []
+    | _ ->
+        let minVal, maxVal = List.min lst, List.max lst
+        List.map (fun x -> if x = minVal then maxVal elif x = maxVal then minVal else x) lst
+
+let shiftLeft1List lst =
+    match lst with
+    | [] -> []
+    | h :: t -> t @ [h]
+
+let findIndicesList lst =
+    lst
+    |> List.mapi (fun i x -> if i > 0 && x < List.item (i - 1) lst then Some i else None)
+    |> List.choose id
+
+let divisorsList lst =
+    let getDivisors n = [1 .. n] |> List.filter (fun x -> n % x = 0)
+    lst |> List.collect getDivisors |> List.distinct
+
+let countElementsList lst =
+    let _, count = List.fold (fun (sum, acc) x -> if x > sum then (sum + x, acc + 1) else (sum + x, acc)) (0, 0) lst
+    count

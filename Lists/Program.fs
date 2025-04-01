@@ -67,17 +67,35 @@ let testReadStrings () =
 
 //Задание 11-16
 let testListProccessin () =
-    let originalList = [1;2;3;4;5;6]
-    Console.WriteLine("Оригинальный список: ")
-    Console.WriteLine(printList originalList)
+    Console.WriteLine("\nОбработка списков:")
+    let testList = [3; 8; 2; 7; 5; 1]
 
-    Console.WriteLine("Список со сдвигом вправо на 2 позиции:")
-    Console.WriteLine(printList (shiftRightTwoPositionsList originalList))
+    let shiftedRight2 = shiftRight2List testList
+    Console.WriteLine("Циклический сдвиг вправо на 2 позиции:")
+    Console.WriteLine(printList shiftedRight2)
 
-    Console.WriteLine("Смена максимального и минимального элемента списка:")
-    //Console.WriteLine(printList ())
+    let swappedMinMax = swapMinMaxList testList
+    Console.WriteLine("Поменяли местами мин. и макс. элементы:")
+    Console.WriteLine(printList swappedMinMax)
+
+    let shiftedLeft1 = shiftLeft1List testList
+    Console.WriteLine("Циклический сдвиг влево на 1 позицию:")
+    Console.WriteLine(printList shiftedLeft1)
+
+    let smallerIndices = findIndicesList testList
+    Console.WriteLine("Индексы элементов, которые меньше левого соседа:")
+    Console.WriteLine(printList smallerIndices)
+    
+    let allDivisors = divisorsList testList
+    Console.WriteLine("Все положительные делители списка без повторений:")
+    Console.WriteLine(printList allDivisors)
+
+    let countGreater = countElementsList testList
+    Console.WriteLine("Количество элементов, больших суммы всех предыдущих:")
+    Console.WriteLine(countGreater)
 
 let testChurchProccessing () =
+    Console.WriteLine("\nОбработка списков Черча:")
     let testList = [3; 8; 2; 7; 5; 1]
 
     let shiftedRight2 = shiftRight2 testList
