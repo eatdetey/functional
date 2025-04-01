@@ -1,5 +1,5 @@
 module frequency
-open readList
+open lists
 
 let listMax list = 
     match list with 

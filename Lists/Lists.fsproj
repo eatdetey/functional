@@ -6,7 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="ascii.fs" />
+    <Compile Include="palindrome.fs" />
     <Compile Include="array.fs" />
+    <Compile Include="church.fs" />
     <Compile Include="lists.fs" />
     <Compile Include="binaryTree.fs" />
     <Compile Include="readList.fs" />

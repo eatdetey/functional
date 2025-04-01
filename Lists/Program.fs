@@ -3,7 +3,10 @@ open readList
 open frequency
 open binaryTree
 open lists
+open church
 open array
+open palindrome
+open ascii
 
 //Задание 1
 let list = [1; 2; 3; 4; 5; 6]
@@ -122,6 +125,39 @@ let testChurchProccessing () =
     Console.WriteLine("Количество элементов, больших суммы всех предыдущих:")
     Console.WriteLine(countGreater)
 
+//Задание 17
+let testSort () =
+    let testList = [10; 13; -5; 4; 9]
+    Console.WriteLine(printList (sortByP testList))
 
-testListProccessin()
-testChurchProccessing()
+//Задание 18
+let testArray() =
+    Console.WriteLine("Введите первый массив:")
+    let arr1 = readArray ()
+
+    Console.WriteLine("Введите второй массив:")
+    let arr2 = readArray ()
+
+    let intersection = arrayIntersection arr1 arr2
+    Console.WriteLine("Пересечение массивов:")
+    Console.WriteLine(String.Join(", ", intersection))
+
+
+//Задание 19
+let testPalindrome () =
+    Console.WriteLine("Введите строку:")
+    let input = Console.ReadLine()
+
+    if isPalindrome input then
+        Console.WriteLine("Прописные символы образуют палиндром.")
+    else
+        Console.WriteLine("Прописные символы не образуют палиндром.")
+
+//Задание 20
+let testASCII () =
+    let strings = ["abc"; "abcdef"; "hello"; "world"]
+    let sortedStrings = sortByQuadraticDeviation strings
+
+    sortedStrings |> List.iter (printfn "%s")
+
+testASCII()
