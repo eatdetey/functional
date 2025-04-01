@@ -13,9 +13,10 @@ let readListFromKeyboard n =
 
 let rec printList list =
     match list with
-        | [] -> Console.ReadKey()
+        | [] -> Console.WriteLine("")
         | head::tail ->
-            Console.WriteLine(head.ToString())
+            Console.Write(head.ToString())
+            Console.Write(" ")
             printList tail
 
 let rec reduceList list (f: int -> int -> int) (p: int -> bool) acc =

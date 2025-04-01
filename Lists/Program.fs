@@ -3,6 +3,7 @@ open readList
 open frequency
 open binaryTree
 open lists
+open array
 
 //Задание 1
 let list = [1; 2; 3; 4; 5; 6]
@@ -64,4 +65,45 @@ let testReadStrings () =
     let stringList = readStrings()
     Console.WriteLine(sortStringsByLength stringList)
 
-testReadStrings()
+//Задание 11-16
+let testListProccessin () =
+    let originalList = [1;2;3;4;5;6]
+    Console.WriteLine("Оригинальный список: ")
+    Console.WriteLine(printList originalList)
+
+    Console.WriteLine("Список со сдвигом вправо на 2 позиции:")
+    Console.WriteLine(printList (shiftRightTwoPositionsList originalList))
+
+    Console.WriteLine("Смена максимального и минимального элемента списка:")
+    //Console.WriteLine(printList ())
+
+let testChurchProccessing () =
+    let testList = [3; 8; 2; 7; 5; 1]
+
+    let shiftedRight2 = shiftRight2 testList
+    Console.WriteLine("Циклический сдвиг вправо на 2 позиции:")
+    Console.WriteLine(printList shiftedRight2)
+
+    let swappedMinMax = swapMinMax testList
+    Console.WriteLine("Поменяли местами мин. и макс. элементы:")
+    Console.WriteLine(printList swappedMinMax)
+
+    let shiftedLeft1 = shiftLeft1 testList
+    Console.WriteLine("Циклический сдвиг влево на 1 позицию:")
+    Console.WriteLine(printList shiftedLeft1)
+
+    let smallerIndices = findIndices testList
+    Console.WriteLine("Индексы элементов, которые меньше левого соседа:")
+    Console.WriteLine(printList smallerIndices)
+    
+    let allDivisors = divisors testList []
+    Console.WriteLine("Все положительные делители списка без повторений:")
+    Console.WriteLine(printList allDivisors)
+
+    let countGreater = countElements testList
+    Console.WriteLine("Количество элементов, больших суммы всех предыдущих:")
+    Console.WriteLine(countGreater)
+
+
+testListProccessin()
+testChurchProccessing()
