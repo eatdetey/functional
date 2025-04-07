@@ -1,5 +1,6 @@
 ﻿open System
 open geometricFigures
+open maybe
 
 let testGeometricFigures() =
     let rect = Rectangle(3.0, 4.0) :> IPrint
@@ -18,4 +19,26 @@ let testGeometricFigures() =
     printfn "Площадь квадрата: %.2f" (area fig2)
     printfn "Площадь круга: %.2f" (area fig3)
 
-testGeometricFigures()
+//testGeometricFigures()
+
+let testFunctorMonad() =
+    let m = Just 10
+    let nothing = Nothing
+    let f = (+) 1
+    let g = (*) 2
+
+    printfn "Функтор – идентичность: %b" (functor_identity_test m)
+    printfn "Функтор – композиция: %b" (functor_composition_test m f g)
+
+    printfn "Аппликатив – идентичность: %b" (applicative_identity_test m)
+    printfn "Аппликатив – гомоморфизм: %b" (applicative_homomorphism_test f 3)
+    printfn "Аппликатив – интерчейндж: %b" (applicative_interchange_test (Just f) 3)
+
+    let fM x = Just (x + 1)
+    let gM x = Just (x * 2)
+
+    printfn "Монада – left identity: %b" (monad_left_identity_test 5 fM)
+    printfn "Монада – right identity: %b" (monad_right_identity_test m)
+    printfn "Монада – ассоциативность: %b" (monad_associativity_test m fM gM)
+
+testFunctorMonad()

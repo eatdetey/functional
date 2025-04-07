@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="maybe.fs" />
     <Compile Include="geometricFigures.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
