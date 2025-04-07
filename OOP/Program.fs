@@ -1,6 +1,8 @@
 ﻿open System
 open geometricFigures
 open maybe
+open textAnalyze
+open FParsec
 
 let testGeometricFigures() =
     let rect = Rectangle(3.0, 4.0) :> IPrint
@@ -41,4 +43,15 @@ let testFunctorMonad() =
     printfn "Монада – right identity: %b" (monad_right_identity_test m)
     printfn "Монада – ассоциативность: %b" (monad_associativity_test m fM gM)
 
-testFunctorMonad()
+//testFunctorMonad()
+
+let testTextAnalyze () =
+    let input = "5 + 3 - 2"
+    match run exprParser input with
+    | Success(result, _, _) ->
+        printfn "Результат разбора: %A" result
+        printfn "Вычисление: %d" (eval result)
+    | Failure(msg, _, _) ->
+        printfn "Ошибка парсинга: %s" msg
+
+testTextAnalyze()
