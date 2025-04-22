@@ -35,3 +35,57 @@ in_list([],_) :- false.
 in_list([X|T],X).
 %in_list([X|T],X):-X.
 in_list([_|T],X) :- in_list(T,X).
+
+%Факториал
+factorial(N, F) :- factorial(N, 1, F).
+
+factorial(0, Acc, Acc).
+factorial(N, Acc, F) :-
+    N > 0,
+    Acc1 is Acc * N,
+    N1 is N - 1,
+    factorial(N1, Acc1, F).
+
+%Проверка на свободность от квадратов
+free_from_squares(N) :- free_from_squares(N, 2).
+
+free_from_squares(N, D) :-
+    D*D > N, !. 
+free_from_squares(N, D) :-
+    R is N mod (D*D),
+    R \= 0,
+    D1 is D + 1,
+    free_from_squares(N, D1).
+
+%Чтение списка с клавиатуры
+read_list(List) :- read_list([], List).
+
+read_list(Acc, List) :-
+    read(X),
+    ( X = end -> reverse(Acc, List)
+    ; read_list([X|Acc], List)
+    ).
+
+%Вывод списка
+write_list([]).
+write_list([H|T]) :-
+    write(H), nl,
+    write_list(T).
+
+%Предикат sum_list_down(+List,?Summ)
+sum_list_down(List, Summ) :- sum_list_down(List, 0, Summ).
+
+sum_list_down([], Acc, Acc).
+sum_list_down([H|T], Acc, Summ) :-
+    Acc1 is Acc + H,
+    sum_list_down(T, Acc1, Summ).
+
+%Удаляет все элементы, сумма цифр которых равна данной
+remove_by_digit_sum([], _, []).
+remove_by_digit_sum([H|T], TargetSum, Result) :-
+    numSumDown(H, Sum),
+    ( Sum =:= TargetSum ->
+        remove_by_digit_sum(T, TargetSum, Result)
+    ; Result = [H|Rest],
+      remove_by_digit_sum(T, TargetSum, Rest)
+    ).
