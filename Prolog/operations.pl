@@ -1,3 +1,8 @@
+:- encoding(utf8).
+
+:- set_prolog_flag(encoding, utf8).
+:- set_stream(user_output, encoding(utf8)).
+
 %Максимум 2-х
 max(X,Y,X) :- X > Y, !.
 max(_,Y,Y).
@@ -117,3 +122,46 @@ gcd(A, 0, A) :- !.
 gcd(A, B, GCD) :-
     R is A mod B,
     gcd(B, R, GCD).
+
+%Сдвиг вправо на 2 позиции
+shift_right_2(List, Result) :-
+    myappend(Mid, [A, B], List),
+    myappend([A, B], Mid, Result).
+
+%Сдвиг влево на 1 позицию
+shift_left_1([H|T], Result) :- myappend(T, [H], Result).
+
+%Минимум списка
+my_min_list([X], X).
+my_min_list([H|T], Min) :-
+    my_min_list(T, TempMin),
+    (H < TempMin -> Min = H ; Min = TempMin).
+
+%Максимум списка
+my_max_list([X], X).
+my_max_list([H|T], Max) :-
+    my_max_list(T, TempMax),
+    (H > TempMax -> Max = H ; Max = TempMax).
+
+%Смена минимального и максимального
+swap_min_max([], _, _, []).
+swap_min_max([H|T], Min, Max, [Max|R]) :-
+    H =:= Min, swap_min_max(T, Min, Max, R).
+swap_min_max([H|T], Min, Max, [Min|R]) :-
+    H =:= Max, swap_min_max(T, Min, Max, R).
+swap_min_max([H|T], Min, Max, [H|R]) :-
+    H =\= Min, H =\= Max, swap_min_max(T, Min, Max, R).
+
+testTask3 :-
+    read_list(List),
+    shift_right_2(List,Result1),
+    write('Сдвиг вправо на 2:'), nl,
+    write_list(Result1),
+    shift_left_1(List,Result2),
+    write('Сдвиг влево на 1:'), nl,
+    write_list(Result2),
+    my_min_list(List,Min),
+    my_max_list(List,Max),
+    swap_min_max(List,Min,Max,Result3),
+    write('Смена местами максимального и минимального:'), nl,
+    write_list(Result3).
