@@ -3,6 +3,8 @@ open geometricFigures
 open maybe
 open textAnalyze
 open FParsec
+open agent
+open passport
 
 let testGeometricFigures() =
     let rect = Rectangle(3.0, 4.0) :> IPrint
@@ -54,4 +56,35 @@ let testTextAnalyze () =
     | Failure(msg, _, _) ->
         printfn "Ошибка парсинга: %s" msg
 
-testTextAnalyze()
+//testTextAnalyze()
+
+let testAgent () =
+    let logger = LogAgent()
+
+    logger.Post(Print "Привет, мир!")
+    logger.Post(Error "Что-то пошло не так.")
+    logger.Post(Print "Работаем дальше...")
+    logger.Post(Exit)
+
+    System.Threading.Thread.Sleep(1000)
+
+//testAgent()
+
+let testPassport () =
+    let passport = Passport(
+        lastName = "Иванов",
+        firstName = "Иван",
+        patronymic = "Иванович",
+        gender = "М",
+        birthDate = DateTime(1990, 1, 15),
+        birthPlace = "г. Москва",
+        series = "1234",
+        number = "567890",
+        issuedDate = DateTime(2010, 5, 20),
+        issuedBy = "ОВД г. Москвы",
+        departmentCode = "770-001"
+    )
+
+    printfn "%s\n" (passport.ToString())
+
+testPassport()

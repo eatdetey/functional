@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="passport.fs" />
+    <Compile Include="agent.fs" />
     <Compile Include="textAnalyze.fs" />
     <Compile Include="maybe.fs" />
     <Compile Include="geometricFigures.fs" />
