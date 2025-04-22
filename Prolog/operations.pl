@@ -89,3 +89,31 @@ remove_by_digit_sum([H|T], TargetSum, Result) :-
     ; Result = [H|Rest],
       remove_by_digit_sum(T, TargetSum, Rest)
     ).
+
+%Произведение цифр numProd(+N,?S), вниз
+numProdDown(X,Answer):-
+    numProdDownInner(X,1,Answer).
+numProdDownInner(0,Acc,Acc):-!.
+numProdDownInner(X,Acc,Answer):-
+    X1 is X div 10,
+    Acc1 is Acc * (X mod 10),
+    numProdDownInner(X1,Acc1,Answer).
+
+%Количество нечетных цифр числа, больших 3
+numMoreThenThreeCount(X,Answer):-
+    numMoreThenThreeCountInner(X,0,Answer).
+numMoreThenThreeCountInner(0,Acc,Acc):-!.
+numMoreThenThreeCountInner(X,Acc,Answer):-
+    X1 is X div 10,
+   (((X mod 10) > 3, (X mod 10) mod 2 =:= 1) ->
+        Acc1 is Acc + 1
+    ;
+        Acc1 = Acc
+   ),
+    numMoreThenThreeCountInner(X1,Acc1,Answer).
+
+%НОД для двух чисел
+gcd(A, 0, A) :- !.
+gcd(A, B, GCD) :-
+    R is A mod B,
+    gcd(B, R, GCD).
