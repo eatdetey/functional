@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/+wevPc7HvjAlAfe9vIyM5FMP0khYVnmN+iwUiP/hYdMvbXEyp0vSvyvkR0r/jRkTHDjviHAI9sF4jBCXzB0kg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\admin\\Desktop\\Lab\\filp-labs\\lab3_winforms_arrays\\lab3_winforms_arrays.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\fsharp.core\\8.0.100\\fsharp.core.8.0.100.nupkg.sha512"
+  ],
+  "logs": []
+}

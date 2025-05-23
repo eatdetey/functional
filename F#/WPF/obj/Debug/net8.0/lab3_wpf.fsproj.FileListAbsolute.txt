@@ -1,0 +1,5 @@
+C:\Users\admin\Desktop\Lab\filp-labs\lab3_wpf\obj\Debug\net8.0\lab3_wpf.fsproj.AssemblyReference.cache
+C:\Users\admin\Desktop\Lab\filp-labs\lab3_wpf\obj\Debug\net8.0\lab3_wpf.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\Lab\filp-labs\lab3_wpf\obj\Debug\net8.0\lab3_wpf.AssemblyInfo.fs
+C:\Users\admin\Desktop\Lab\filp-labs\lab3_wpf\obj\Debug\net8.0\lab3_wpf.fsproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\Lab\filp-labs\lab3_wpf\obj\Debug\net8.0\lab3_wpf.sourcelink.json

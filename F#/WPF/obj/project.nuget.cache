@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/Epck/TOVg4dnox6jyasXDAQLk/GYCf5gFbZJoA/KH1ox371bSevHWzjO6zgqBjpvrq+jSZAAj80HBj9mCC1/Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\admin\\Desktop\\Lab\\filp-labs\\lab3_wpf\\lab3_wpf.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\fsharp.core\\8.0.100\\fsharp.core.8.0.100.nupkg.sha512"
+  ],
+  "logs": []
+}
